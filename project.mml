@@ -1,0 +1,353 @@
+{
+  "bounds": [
+    -180,
+    -85.0511,
+    180,
+    85.0511
+  ],
+  "center": [
+    0,
+    0,
+    2
+  ],
+  "format": "png",
+  "interactivity": false,
+  "minzoom": 0,
+  "maxzoom": 22,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "geometry": "polygon",
+      "extent": [
+        -180,
+        -85.051,
+        180,
+        83.6664731
+      ],
+      "id": "landpoly",
+      "class": "",
+      "Datasource": {
+        "file": "/usr/share/mapbox/simplified-land-polygons-complete-3857/simplified_land_polygons.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "landpoly"
+    },
+    {
+      "id": "countries",
+      "name": "countries",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "geometry": "polygon",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
+        "type": "shape",
+        "id": "countries",
+        "project": "Jo1",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      }
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "verduci3",
+      "class": "",
+      "Datasource": {
+        "file": "https://dl.dropboxusercontent.com/u/767553/verduci3.csv",
+        "id": "verduci3",
+        "project": "Jo1",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "verduci3"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "basicmaps",
+      "class": "basicmap",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "basicmaps"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -9.34711546696327,
+        -7.154720000000452,
+        95.64975799300024,
+        61.684219999999186
+      ],
+      "id": "rivers",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/awmc.unc.edu/awmc/map_data/shapefiles/physical_data/ba_rivers/all_rivers.shp"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "rivers",
+      "status": "off"
+    },
+    {
+      "geometry": "linestring",
+      "extent": [
+        -9.32589999999982,
+        -7.154720000000452,
+        64.47119999999995,
+        61.684219999999186
+      ],
+      "id": "barivers",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/awmc.unc.edu/awmc/map_data/shapefiles/physical_data/ba_rivers/ba_rivers.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "barivers",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map1",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map1",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map2",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map2",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map3",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map3",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map4",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv",
+        "id": "map4",
+        "project": "Jo1",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map4",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map5",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv",
+        "id": "map5",
+        "project": "Jo1",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map5",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map6",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv",
+        "id": "map6",
+        "project": "Jo1",
+        "srs": ""
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map6",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map7",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map7",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map8",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map8",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map9",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map9",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map10",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map10",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map11",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "advanced": {},
+      "name": "map11"
+    }
+  ],
+  "scale": 1,
+  "metatile": 4,
+  "name": "Jo V",
+  "description": "",
+  "attribution": ""
+}
