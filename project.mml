@@ -1,14 +1,14 @@
 {
   "bounds": [
-    -180,
-    -85.0511,
-    180,
-    85.0511
+    -1.3184,
+    22.0245,
+    44.209,
+    56.849
   ],
   "center": [
-    0,
-    0,
-    2
+    21.709,
+    40.6473,
+    4
   ],
   "format": "png",
   "interactivity": false,
@@ -69,7 +69,8 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "verduci3"
+      "name": "verduci3",
+      "status": "off"
     },
     {
       "geometry": "point",
@@ -87,7 +88,39 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "basicmaps"
+      "name": "basicmaps",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        22.4167,
+        30.32141,
+        36.06453,
+        39.6417
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "artefacts",
+        "key_field": "gid",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "22.4167,30.32141,36.06453,39.6417",
+        "host": "localhost",
+        "dbname": "gis",
+        "user": "ubuntu",
+        "password": "ubuntu",
+        "id": "artefacts",
+        "project": "Jo1",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "artefacts",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "artefacts",
+      "status": "off"
     },
     {
       "geometry": "linestring",
@@ -342,11 +375,179 @@
       "srs-name": "autodetect",
       "srs": "",
       "advanced": {},
-      "name": "map11"
+      "name": "map11",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        8.051389,
+        29.787777999999996,
+        36.06453,
+        54.057222
+      ],
+      "id": "map12",
+      "class": "",
+      "Datasource": {
+        "file": "/home/ubuntu/basicmaps.csv"
+      },
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "map12",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        34.658,
+        31.699722,
+        34.8499203,
+        32.101372
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select *, site \n|| case when subtype_1a > 0 then ' +' else '' end\n|| case when subtype_1b > 0 then ' #' else '' end \n|| case when subtype_1c > 0 then ' x' else '' end \n|| case when subtype_4a > 0 then ' o' else '' end lbl\nfrom philistia_earrings) p",
+        "key_field": "",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "34.658,31.699722,34.8499203,32.101372",
+        "host": "localhost",
+        "dbname": "gis",
+        "user": "ubuntu",
+        "password": "ubuntu",
+        "id": "earrings_philistia",
+        "project": "Jo1",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "id": "earrings_philistia",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "earrings_philistia",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        34.658,
+        31.699722,
+        34.8499203,
+        32.101372
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select site \n|| case when subtype_2b3b > 0 then ' +' else '' end\n|| case when subtype_2f > 0 then ' #' else '' end \n|| case when subtype_4a > 0 then ' x' else '' end \n|| case when subtype_4b > 0 then ' o' else '' end lbl,\n*\nfrom philistia_bangles\nwhere subtype_2b3b + subtype_2f + subtype_4a + subtype_4b > 0\n) p",
+        "key_field": "",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "34.658,31.699722,34.8499203,32.101372",
+        "host": "localhost",
+        "dbname": "gis",
+        "user": "ubuntu",
+        "password": "ubuntu",
+        "id": "bangles_philistia",
+        "project": "Jo1",
+        "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+      },
+      "id": "bangles_philistia",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "bangles_philistia",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        33.3558,
+        31.281943999999996,
+        36.06453,
+        35.158333
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select *\nfrom pins_type1\nwhere decoration_plain + decoration_ribbedgrooved + decoration_incised > 0\n) p",
+        "key_field": "",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "33.3558,31.281944,36.06453,35.158333",
+        "host": "localhost",
+        "dbname": "gis",
+        "user": "ubuntu",
+        "password": "ubuntu",
+        "id": "pins_type1",
+        "project": "Jo1",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "pins_type1",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "pins_type1"
+    },
+    {
+      "geometry": "unknown",
+      "extent": [
+        34.658,
+        31.699722,
+        34.8499203,
+        31.778890699999998
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select *\nfrom philistia_rings\nwhere subtype_1c1_1b1_1b3 + subtype_1b4_1c4 + subtype_1a3 + subtype_3d + subtype_4b + subtype_1d2 > 0\n) p",
+        "key_field": "",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "34.658,31.699722,34.8499203,31.7788907",
+        "host": "localhost",
+        "dbname": "gis",
+        "user": "ubuntu",
+        "password": "ubuntu"
+      },
+      "id": "rings_philistia",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "rings_philistia",
+      "status": "off"
+    },
+    {
+      "geometry": "point",
+      "extent": [
+        22.4167,
+        31.06584,
+        36.06453,
+        39.6417
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "(select *\nfrom incised_pins\nwhere subtype_1b6_1b8 > 0\n) p",
+        "key_field": "",
+        "geometry_field": "geom",
+        "extent_cache": "auto",
+        "extent": "22.4167,31.06584,36.06453,39.6417",
+        "host": "localhost",
+        "dbname": "gis",
+        "user": "ubuntu",
+        "password": "ubuntu"
+      },
+      "id": "incised_pins",
+      "class": "",
+      "srs-name": "WGS84",
+      "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
+      "advanced": {},
+      "name": "incised_pins",
+      "status": "off"
     }
   ],
-  "scale": 1,
-  "metatile": 4,
+  "scale": 1.5,
+  "metatile": 8,
   "name": "Jo V",
   "description": "",
   "attribution": ""
